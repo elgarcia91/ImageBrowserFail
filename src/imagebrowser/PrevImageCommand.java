@@ -1,8 +1,9 @@
 package imagebrowser;
 
-public class PrevImageCommand implements Command {
+import imagebrowser.UserInterface.ImageViewer;
 
-    private final ImageViewer viewer;
+public class PrevImageCommand extends ImageCommand {
+
     
     public PrevImageCommand(ImageViewer viewer) {
         this.viewer = viewer;
@@ -10,6 +11,6 @@ public class PrevImageCommand implements Command {
     
     @Override
     public void execute() {
-        this.viewer.setImage(this.viewer.getImage().getPrev());
+        
     }
 }

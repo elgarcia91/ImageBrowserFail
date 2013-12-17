@@ -1,7 +1,8 @@
 package imagebrowser;
 
-public class NextImageCommand implements Command{
-    private final ImageViewer viewer;
+import imagebrowser.UserInterface.ImageViewer;
+
+public class NextImageCommand extends ImageCommand{
 
     public NextImageCommand(ImageViewer viewer) {
         this.viewer = viewer;
@@ -10,7 +11,6 @@ public class NextImageCommand implements Command{
 
     @Override
     public void execute() {
-        this.viewer.setImage(this.viewer.getImage().getNext());
     }
 
 }
